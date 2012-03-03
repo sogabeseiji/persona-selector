@@ -8,7 +8,7 @@
 このPersona Selectorはサンプルです。例として画面右上に表示するようになっていますが、簡単な変更で表示位置をカスタマイズする
 ことができます。
 
-![表示位置の選択](selector.png)
+![表示位置の選択](https://github.com/ssogabe/persona-selector/raw/master/selector.png)
 
 
 ## 拡張するには
