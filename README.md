@@ -65,15 +65,6 @@ src/main/resourcres/org/jenkinsci/plugins/persona/selector/TopRightSelector のT
 Job画面への表示を行います。デフォルトでは、画像を画面右上に背景画像として表示し、セリフを表示します。
 画面の右側（推移グラフが表示される位置)に表示されるので、位置を変えたい場合は、JavaScript等で工夫する必要があります。
 
-ここで以下の変数を使用することができます。
-
-* *img.smallIconUrl*  アイコンのURL
-* *img.backgroundImageUrl*  画像のURL
-* *action.quote*  セリフ
-* *action.persona.displayName*  ペルソナの表示名称
-* *selector*  セレクター
-
-
     <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" 
         xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:i="jelly:fmt" xmlns:local="local">
     
@@ -99,6 +90,15 @@ Job画面への表示を行います。デフォルトでは、画像を画面�
             });
         </script>
     </j:jelly>
+
+
+ここで以下の変数を使用することができます。
+
+* *img.smallIconUrl*  アイコンのURL
+* *img.backgroundImageUrl*  画像のURL
+* *action.quote*  セリフ
+* *action.persona.displayName*  ペルソナの表示名称
+* *selector*  セレクター
 
 
 #### summary.jelly
