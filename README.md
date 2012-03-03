@@ -8,6 +8,9 @@
 このPersona Selectorはサンプルです。例として画面右上に表示するようになっていますが、簡単な変更で表示位置をカスタマイズする
 ことができます。
 
+![表示位置の選択](selector.png)
+
+
 ## 拡張するには
 
 ### LocationSelectorの拡張
@@ -136,7 +139,7 @@ Job画面への表示を行います。デフォルトでは、画像を画面�
 
 以上で、修正は完了したのでビルドしてインストールします。
 
-    \mvn clean package
+    mvn clean package
 
 上記を実行すると、target/persona-selector.hpiができますので、
 
