@@ -54,9 +54,7 @@ Jellyファイルは、src/main/resourcres/org/jenkinsci/plugins/persona/selecto
 #### パスの変更
 
 TopRightSelectorの名称を変更したら、Jellyファイルのパスを変更する必要があります。
-
-src/main/resourcres/org/jenkinsci/plugins/persona/selector/TopRightSelector のTopRightSelectorを変更した名称に
-変更します。
+src/main/resourcres/org/jenkinsci/plugins/persona/selector/TopRightSelector のTopRightSelectorを変更した名称に変更します。
 
 #### config.jelly
 
@@ -69,13 +67,15 @@ Job画面への表示を行います。デフォルトでは、画像を画面�
 
 ここで以下の変数を使用することができます。
 
-* _img.smallIconUrl_  アイコンのURL
-* _img.backgroundImageUrl_ 画像のURL
-* _action.quote_ セリフ
-* _action.persona.displayName_ ペルソナの表示名称
-* _selector_ セレクター
+* *img.smallIconUrl*  アイコンのURL
+* *img.backgroundImageUrl*  画像のURL
+* *action.quote*  セリフ
+* *action.persona.displayName*  ペルソナの表示名称
+* *selector*  セレクター
 
-    <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:i="jelly:fmt" xmlns:local="local">
+
+    <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" 
+        xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:i="jelly:fmt" xmlns:local="local">
     
         <j:set var="img" value="${action.image}"/>
         
@@ -87,30 +87,29 @@ Job画面への表示を行います。デフォルトでは、画像を画面�
                 </tr>
             </table>
         </div>  
-    <script>
-      Element.setStyle($('main-table'), {
-          'background-image': 'none'
-      });
-      Element.setStyle($('main-panel'), {
-          'background-image': 'url(${rootURL}/${img.backgroundImageUrl})',
-          'background-repeat': 'no-repeat',
-          'background-position': 'top right',
-          'padding-top': '20px'
-      });
-    </script>
+        <script>
+            Element.setStyle($('main-table'), {
+                'background-image': 'none'
+            });
+            Element.setStyle($('main-panel'), {
+                'background-image': 'url(${rootURL}/${img.backgroundImageUrl})',
+                'background-repeat': 'no-repeat',
+                'background-position': 'top right',
+                'padding-top': '20px'
+            });
+        </script>
     </j:jelly>
 
 
 
 #### summary.jelly
 
-ビルド画面への表示を行います。
-基本的に画面の中央に表示され、tableタグの中に追加されますので、アイコンやセリフは下記のとおり、<tr><td>を使用すると、
-他の画面項目と同じ位置に表示されます。
+ビルド画面への表示を行います。基本的に画面の中央に表示され、tableタグの中に追加されますので、アイコンやセリフは下記のとおり、<tr><td>を使用すると、他の画面項目と同じ位置に表示されます。
 
 使用できる変数は、config.jellyと同様です。
 
-    <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:i="jelly:fmt" xmlns:local="local">
+    <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" 
+        xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:i="jelly:fmt" xmlns:local="local">
 
         <j:set var="img" value="${action.image}"/>
 
@@ -119,17 +118,17 @@ Job画面への表示を行います。デフォルトでは、画像を画面�
             <td style="vertical-align: middle;"><div style="max-width: 400px;">${action.quote}</div></td>
         </tr>
 
-    <script>
-      Element.setStyle($('main-table'), {
-          'background-image': 'none'
-      });
-      Element.setStyle($('main-panel'), {
-          'background-image': 'url(${rootURL}/${img.backgroundImageUrl})',
-          'background-repeat': 'no-repeat',
-          'background-position': 'top right',
-          'padding-top': '20px'
-      });
-    </script>
+        <script>
+        Element.setStyle($('main-table'), {
+              'background-image': 'none'
+        });
+        Element.setStyle($('main-panel'), {
+              'background-image': 'url(${rootURL}/${img.backgroundImageUrl})',
+              'background-repeat': 'no-repeat',
+              'background-position': 'top right',
+            'padding-top': '20px'
+        });
+        </script>
 
     </j:jelly>
 
