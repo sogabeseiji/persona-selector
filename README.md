@@ -83,13 +83,13 @@ Job画面への表示を行います。デフォルトでは、画像を画面�
         </div>  
         <script>
             Element.setStyle($('main-table'), {
-                'background-image': 'none'
+                'backgroundImage': 'none'
             });
             Element.setStyle($('main-panel'), {
-                'background-image': 'url(${rootURL}/${img.backgroundImageUrl})',
-                'background-repeat': 'no-repeat',
-                'background-position': 'top right',
-                'padding-top': '20px'
+                'backgroundImage': 'url(${rootURL}/${img.backgroundImageUrl})',
+                'backgroundRepeat': 'no-repeat',
+                'backgroundPosition': 'top right',
+                'paddingTop': '20px'
             });
         </script>
     </j:jelly>
@@ -123,13 +123,13 @@ Job画面への表示を行います。デフォルトでは、画像を画面�
 
         <script>
         Element.setStyle($('main-table'), {
-              'background-image': 'none'
+              'backgroundImage': 'none'
         });
         Element.setStyle($('main-panel'), {
-              'background-image': 'url(${rootURL}/${img.backgroundImageUrl})',
-              'background-repeat': 'no-repeat',
-              'background-position': 'top right',
-            'padding-top': '20px'
+              'backgroundImage': 'url(${rootURL}/${img.backgroundImageUrl})',
+              'backgroundRepeat': 'no-repeat',
+              'backgroundPosition': 'top right',
+              'paddingTop': '20px'
         });
         </script>
 
